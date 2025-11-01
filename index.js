@@ -39,6 +39,11 @@ const Admin = mongoose.model("Admin", adminSchema);
 // 🧩 JWT Secret
 const JWT_SECRET = process.env.JWT_SECRET || "mysecretkey";
 
+
+app.get("/",(req,res)=>{
+    res.send("Backend is working");
+})
+
 // 🧩 Register Route
 app.post("/api/register", async (req, res) => {
   try {
